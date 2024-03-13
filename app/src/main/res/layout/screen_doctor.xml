@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f9f9f9"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:background="@color/baseColor">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="left|center_vertical|center_horizontal|center|start"
+            android:layout_marginStart="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Doctor"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/shapeableImageView2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="15dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/doctor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/circleImageView" />
+
+                <TextView
+                    android:id="@+id/professiya"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Doctor"
+                    android:textColor="#8a8a8a"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/name"
+                    app:layout_constraintStart_toStartOf="@+id/name"
+                    app:layout_constraintTop_toBottomOf="@+id/name" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Muhammadsolih Abdugafforov"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/shapeableImageView2"
+                    app:layout_constraintStart_toStartOf="@+id/shapeableImageView2"
+                    app:layout_constraintTop_toBottomOf="@+id/shapeableImageView2" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/professiya">
+
+                    <FrameLayout
+                        android:layout_width="90dp"
+                        android:layout_height="110dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/doctor_shape"
+                        android:elevation="7dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:layout_marginHorizontal="18dp"
+                            android:layout_marginLeft="18dp"
+                            android:layout_marginRight="18dp"
+                            android:background="@drawable/shape_person_bg_green"
+                            android:padding="10dp"
+                            android:src="@drawable/icon_persons" />
+
+                        <TextView
+                            android:id="@+id/odam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center_vertical|center_horizontal|center"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center"
+                            android:text="1000+\10Patients"
+                            android:textSize="12sp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="90dp"
+                        android:layout_height="110dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/doctor_shape"
+                        android:elevation="7dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:layout_marginHorizontal="18dp"
+                            android:layout_marginLeft="18dp"
+                            android:layout_marginRight="18dp"
+                            android:background="@drawable/shape_person_bg_pink"
+                            android:padding="13dp"
+                            android:src="@drawable/icon_bag" />
+
+                        <TextView
+                            android:id="@+id/experince"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center_vertical|center_horizontal|center"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center"
+                            android:text="10 Yrs\10Experince"
+                            android:textSize="12sp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="90dp"
+                        android:layout_height="110dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/doctor_shape"
+                        android:elevation="7dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:layout_marginHorizontal="18dp"
+                            android:layout_marginLeft="18dp"
+                            android:layout_marginRight="18dp"
+                            android:background="@drawable/shape_person_bg_yellow"
+                            android:padding="10dp"
+                            android:src="@drawable/icon_star" />
+
+                        <TextView
+                            android:id="@+id/rating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center_vertical|center_horizontal|center"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center"
+                            android:text="4.5\10Rating"
+                            android:textSize="12sp" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="About Doctor"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+                <TextView
+                    android:id="@+id/aboutDoctor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="DeDapibus elaboraret mediocrem repudiandae postea senectus. Dicit mus partiendo etiam elitr nominavi.finiebas eirmod meliore antiopam convallis definitiones dis constituto. Maiestatis ceteros oratio molestiae risus ipsum mei."
+                    android:textColor="#8e8e8e"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+                    app:layout_constraintStart_toStartOf="@+id/textView"
+                    app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Communicaiton"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/aboutDoctor"
+                    app:layout_constraintTop_toBottomOf="@+id/aboutDoctor" />
+
+                <LinearLayout
+                    android:id="@+id/linerForCom"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:background="@drawable/telegram_shape_bg"
+                        android:gravity="center|start"
+                        android:padding="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/phone"
+                        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/icon_telegram" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="5dp"
+                            android:text="Telegram" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/phone_shape_bg"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/icon_phone" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="5dp"
+                            android:text="Tel Number" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/add_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/go_to_shape"
+                    android:drawableEnd="@drawable/icon_note"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center|start"
+                    android:letterSpacing="0.02"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:text="Sign up for a doctor&apos;s appointment"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linerForCom" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <FrameLayout
+            android:id="@+id/loader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminateTint="@color/baseColor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+
+</LinearLayout>

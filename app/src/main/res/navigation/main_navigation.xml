@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@+id/mainScreen">
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="uz.gulirano.clinics.ui.splash.SplashScreen"
+        android:label="screen_splash"
+        tools:layout="@layout/screen_splash">
+        <action
+            android:id="@+id/action_splashScreen_to_mainScreen"
+            app:destination="@+id/mainScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainScreen"
+        android:name="uz.gulirano.clinics.ui.main.MainScreen"
+        android:label="screen_main"
+        tools:layout="@layout/screen_main">
+        <action
+            android:id="@+id/action_mainScreen_to_helpPage"
+            app:destination="@+id/helpPage" />
+        <action
+            android:id="@+id/action_mainScreen_to_locationPage"
+            app:destination="@+id/locationPage" />
+        <action
+            android:id="@+id/action_mainScreen_to_pageDoctors"
+            app:destination="@id/pageDoctors" />
+        <action
+            android:id="@+id/action_mainScreen_to_categoryClinicScreen"
+            app:destination="@id/categoryClinicScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/helpPage"
+        android:name="uz.gulirano.clinics.ui.main.help.HelpPage"
+        android:label="page_help"
+        tools:layout="@layout/page_help" />
+    <fragment
+        android:id="@+id/homePage"
+        android:name="uz.gulirano.clinics.ui.main.clinics.HomePage"
+        android:label="page_home"
+        tools:layout="@layout/page_home">
+        <action
+            android:id="@+id/action_homePage_to_clinicScreen"
+            app:destination="@id/clinicScreen" />
+        <argument
+            android:name="category"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/locationPage"
+        android:name="uz.gulirano.clinics.ui.main.location.LocationPage"
+        android:label="page_location"
+        tools:layout="@layout/page_location" />
+    <fragment
+        android:id="@+id/clinicScreen"
+        android:name="uz.gulirano.clinics.ui.clinic.ClinicScreen"
+        android:label="screen_clinic"
+        tools:layout="@layout/screen_clinic">
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorScreen"
+        android:name="uz.gulirano.clinics.ui.doctor.DoctorScreen"
+        android:label="screen_doctor"
+        tools:layout="@layout/screen_doctor">
+        <action
+            android:id="@+id/action_doctorScreen_to_bronScreen"
+            app:destination="@+id/bronScreen" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/pageDoctors"
+        android:name="uz.gulirano.clinics.ui.main.doctors.DoctorsPage"
+        android:label="screen_doctors"
+        tools:layout="@layout/page_doctors">
+        <action
+            android:id="@+id/action_pageDoctors_to_categoryDoctorScreen"
+            app:destination="@id/categoryDoctorScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/bronScreen"
+        android:name="uz.gulirano.clinics.ui.consultation.ConsultationScreen"
+        android:label="screen_bron"
+        tools:layout="@layout/screen_consultation">
+        <argument
+            android:name="doctorName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryClinicScreen"
+        android:name="uz.gulirano.clinics.ui.category_clinic.CategoryClinicScreen"
+        android:label="screen_category_clinic"
+        tools:layout="@layout/screen_category_clinic">
+        <action
+            android:id="@+id/action_categoryClinicScreen_to_homePage"
+            app:destination="@id/homePage" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryDoctorScreen"
+        android:name="uz.gulirano.clinics.ui.list_doctor.CategoryDoctorScreen"
+        android:label="screen_list_doctor"
+        tools:layout="@layout/screen_list_doctor">
+        <action
+            android:id="@+id/action_categoryDoctorScreen_to_doctorScreen"
+            app:destination="@id/doctorScreen" />
+        <argument
+            android:name="category"
+            app:argType="string" />
+    </fragment>
+</navigation>

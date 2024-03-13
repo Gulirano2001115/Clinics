@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="350dp"
+    android:layout_height="400dp"
+    android:background="#00ffffff">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="15dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageDialog"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:scaleType="centerCrop"
+                android:src="#56969696"
+                app:layout_constraintDimensionRatio="2:1.2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/raundedImageView" />
+
+            <TextView
+                android:id="@+id/titleDialog"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Medical Title"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/imageDialog"
+                app:layout_constraintStart_toStartOf="@+id/imageDialog"
+                app:layout_constraintTop_toBottomOf="@+id/imageDialog" />
+
+            <TextView
+                android:id="@+id/phoneDialog"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Tel: +998909405577"
+                android:textColor="#727272"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/imageDialog"
+                app:layout_constraintStart_toStartOf="@+id/imageDialog"
+                app:layout_constraintTop_toBottomOf="@+id/titleDialog" />
+
+            <TextView
+                android:id="@+id/numberDialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Rating "
+                app:layout_constraintStart_toStartOf="@+id/phoneDialog"
+                app:layout_constraintTop_toBottomOf="@+id/phoneDialog" />
+
+            <RatingBar
+                android:id="@+id/ratingDialog"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:numStars="5"
+                android:rating="2"
+                android:theme="@style/RatingBar"
+                app:layout_constraintBottom_toBottomOf="@+id/numberDialog"
+                app:layout_constraintStart_toEndOf="@+id/numberDialog"
+                app:layout_constraintTop_toTopOf="@+id/numberDialog" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/add_btn"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/go_to_shape"
+                android:drawableEnd="@drawable/icon_goto"
+                android:fontFamily="sans-serif"
+                android:gravity="left|center_vertical|center_horizontal|center|start"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="Get location with navigation"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

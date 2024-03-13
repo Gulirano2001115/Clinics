@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Base.Theme.Clinics" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/baseColor</item>
+        <item name="background">@color/white</item>
+        <item name="android:windowSplashScreenBackground" tools:targetApi="s">@color/white</item>
+        <item name="android:navigationBarColor">@color/baseColor</item>
+    </style>
+
+    <style name="Theme.Clinics" parent="Base.Theme.Clinics" />
+</resources>
